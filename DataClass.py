@@ -1,18 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-bombers = 500
-fighters = 500
+yonko = 200
+admirals = 200
 
-#Average wingspan of a bomber we are saying is 28 feet
-#Average for a fighter is 24 feet
-#Going to look at adding in some plus/minus 4 feet to differnent types of planes
-bWings = 28 + 4 * np.random.randn(bombers)
-fWings = 24 + 4 * np.random.randn(fighters)
+print("What we are doing here is making our own data set. We are comparing the power levels of Yonko vs Admirals.")
+print("Once we have made our data set we are using an histogram to visualize it.")
+#Average power level of a yonko we are saying is 590
+#Average for a admirals is 580
+#Going to look at adding in some plus/minus 4 power level to differnent types of people
+yPower = 590 + 4 * np.random.randn(yonko)
+aPower = 580 + 4 * np.random.randn(admirals)
 
 
 #Visualizzing the data in a histogram
-#bomber in blue fighters in red
+#yonko in blue admirals in red
 
-plt.hist([bWings, fWings], stacked=True, color=['b', 'r'])
+plt.hist([yPower, aPower], stacked=True, color=['b', 'g'])
 plt.show()
